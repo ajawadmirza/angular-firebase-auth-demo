@@ -1,0 +1,24 @@
+<div>
+  <div class='sign-in-button' (click)="authService.GoogleAuth()">
+    <div class=content-wrapper>
+      <div class='logo-wrapper'>
+        <img src='https://developers.google.com/identity/images/g-logo.png'>
+      </div>
+      <span class='text-container'>
+        <span>Sign in with Google</span>
+      </span>
+    </div>
+  </div>
+
+  <div class='sign-in-button' (click)="authService.MicrosoftAuth()">
+    <div class=content-wrapper>
+      <div class='logo-wrapper'>
+        <img
+          src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png'>
+      </div>
+      <span class='text-container'>
+        <span>Sign in with Microsoft</span>
+      </span>
+    </div>
+  </div>
+</div>
