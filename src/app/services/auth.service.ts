@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { GoogleAuthProvider, OAuthProvider } from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,8 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 export class AuthService {
   constructor(
-    public afAuth: AngularFireAuth
+    public afAuth: AngularFireAuth,
+    private http: HttpClient
   ) { }
 
   // Sign in with Google
@@ -25,9 +27,12 @@ export class AuthService {
   AuthLogin(provider: any) {
     return this.afAuth
       .signInWithPopup(provider)
-      .then((result) => {
-        console.log('You have been successfully logged in!');
-        console.log(result);
+      .then((result:any) => {
+        result.user.getIdToken().then((tkn:any) => {
+          this.http.post('http://localhost:9000/auth', {idToken: tkn}, {}).subscribe((res) => {
+            console.log(res);
+          });
+        });
       })
       .catch((error) => {
         console.log(error);

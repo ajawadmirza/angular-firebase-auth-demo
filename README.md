@@ -25,4 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# angular-firebase-auth-demo
+
+## Google Authentication References
+
+[Google app configuration](https://www.appypie.com/faqs/how-can-i-get-api-key-auth-domain-database-url-and-storage-bucket-from-my-firebase-account)
+
+[Angular app connection with firebase](https://www.positronx.io/angular-firebase-login-with-google-tutorial/#:~:text=Go%20to%20your%20Firebase%20account,provider%20service%20from%20Firebase%20backend.)
+
+## Microsoft Authentication References
+
+[Microsoft/Azure app configuration](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
+
+[App connection with microsoft provider](https://firebase.google.com/docs/auth/web/microsoft-oauth?authuser=0&hl=en)
